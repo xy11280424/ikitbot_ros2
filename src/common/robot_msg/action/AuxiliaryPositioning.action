@@ -1,0 +1,38 @@
+# 定义动作类型
+uint8 CANCEL            = 0 # 0-停止动作
+uint8 FORWARD           = 1 # 1-前进
+uint8 BACK              = 2 # 2-后退
+uint8 LEFT              = 3 # 3-左转
+uint8 RIGHT             = 4 # 4-右转
+uint8 R_LEFT            = 5 # 5-向左画圆
+uint8 R_RIGHT           = 6 # 6-向右画圆
+
+uint8 action_type
+float32 param               # 前进的距离或自转的角度或转弯弧度
+float32 replenish_param     # 需要补充的参数
+float32 linear_velocity     # 线速度，该参数暂时保留
+---
+# 执行动作的结果
+# uint8 CANCEL            = 0 # 0-动作被取消
+# uint8 DONE              = 2 # 2-动作完成
+# uint8 OBSTACLE          = 3 # 3-存在障碍物，动作停止
+# uint8 MOTOR_ERROR       = 4 # 4-电机错误，动作执行失败
+
+# uint8 action_result
+---
+# 执行动作时的反馈
+uint8 CANCEL            = 0  # 0-动作被取消
+uint8 DOING             = 1  # 1-动作正在执行
+uint8 DONE              = 2  # 2-动作完成
+uint8 OBSTACLE          = 3  # 3-存在障碍物，动作停止
+uint8 MOTOR_ERROR       = 4  # 4-电机错误，动作执行失败
+uint8 ODOM_ERROR        = 5  # 5-里程计错误，动作执行失败
+uint8 NAV_RUNING        = 6  # 6-正在执行导航任务，动作执行失败
+uint8 EMERGENCY_STOP    = 7  # 7-急停按下，停止动作
+uint8 UNKNOWN_ERROR     = 9  # 6-未知错误，动作执行失败
+
+uint8 action_status
+uint8 action_type            # 动作类型
+float32 goal_param           # 前进的最终距离或需要旋转的角度或转弯弧度
+float32 current_param        # 已前进多少米或已旋转多少度
+string action_feedback_text  # 详细信息

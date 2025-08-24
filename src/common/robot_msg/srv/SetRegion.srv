@@ -1,0 +1,14 @@
+# srv definition
+
+uint8                   region_type       # 区域的类型 1 虚拟墙 2 斜坡 3 减速带 4 高亮区 5 地毯 6 擦除区域 7 颠簸区 9 窄口窄通道
+string                  cmd               # 操作命令 add 添加或更改 remove 删除 clean 清除 get 获取
+string                  map_name          # 只有在get命令时可以获取其他地图包中的区域信息，其他命令只可以操作本地图中的区域数据
+robot_msg/Region[]      regions           # 区域坐标
+---
+
+#response constants
+#response fields
+robot_msg/Region[]      current_regions   #   获取到的当前区域信息
+bool    result                            #   执行结果，成功或者失败 true 执行成功 false 执行失败
+int32   message_code                      #   额外信息代码
+string  message                           #   额外信息，e.g. for error messages

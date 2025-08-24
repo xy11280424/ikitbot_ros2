@@ -1,0 +1,33 @@
+# srv definition
+
+#request constants
+
+#   "building_map",         构建地图
+#   "extend_map",           增量构图
+#   "save_map",             保存地图
+#   "switch_map",           加载地图
+#   "delete_map",           删除地图
+#   "recover_locating"      重定位
+#   "add_virtual_wall"      添加虚拟墙
+#   "remove_virtual_wall"   移除虚拟墙
+#   "sync_set_map"          同步设置地图
+#   "sync_get_map"          同步获取地图
+#   "erase_map"             擦除地图
+#   "set_floor"             设置地图对应楼层
+#   "set_elevator_outside"  设置电梯外部点
+#   "set_elevator_inside"   设置电梯内部点
+#  get_original_map  获得原始地图
+
+#request fields
+string                  cmd                 # 地图操作命令
+string                  name                # 地图名称
+int32                   floor               # 楼层
+geometry_msgs/Vector3   pose                # 加载地图的初始位姿
+robot_msg/Restrict      virtual_wall        # 设置虚拟墙
+---
+
+#response constants
+#response fields
+bool    result          #   执行结果，成功或者失败
+int32   message_code    #   额外信息代码
+string  message         #   额外信息，e.g. for error messages

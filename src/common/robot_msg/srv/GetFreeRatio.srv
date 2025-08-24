@@ -1,0 +1,6 @@
+# 获取矩形区域中空闲栅格占的比例
+geometry_msgs/Polygon[] polygons #多边形区域
+---
+float32[] free_ratios        #   free点占的比例
+int32[]   results            #   额外信息代码。0：成功，其他 失败
+string[]  messages           #   额外信息，e.g. for error messages

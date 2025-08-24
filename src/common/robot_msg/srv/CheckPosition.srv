@@ -1,0 +1,4 @@
+geometry_msgs/Point position #position
+---
+bool is_legal #true:lagal,false:illegal
+string message

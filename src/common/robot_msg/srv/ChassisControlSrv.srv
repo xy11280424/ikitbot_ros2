@@ -1,0 +1,6 @@
+#request
+string cmd
+int32 emergency_switch_status
+---
+#respond
+int32 emergency_switch_status

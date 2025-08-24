@@ -1,0 +1,18 @@
+# srv definition
+
+#request constants
+
+#   "add"      添加
+#   "remove"    清除所有限制层文件
+
+#request fields
+string  cmd                        #   操作命令
+float32 left_limit                 #   左侧限制距离
+float32 right_limit                #   右侧限制距离
+geometry_msgs/PoseStamped[]  path  #   被限制的路径
+---
+#response constants
+#response fields
+bool    result          #   执行结果，成功或者失败
+int32   message_code    #   额外信息代码
+string  message         #   额外信息

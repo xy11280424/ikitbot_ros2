@@ -1,0 +1,17 @@
+#request fields
+
+#   "set_gate"              设置闸机(可以一个或多个,设备ID相同会覆盖)
+#   "get_gate"              获取当前地图内所有闸机信息
+#   "delete_gate"           删除闸机(可以一个或多个,只需给出设备ID即可)
+
+#   每次的闸机操作后都会返回当前地图内存在的所有闸机信息
+
+string                      cmd                 # 闸机操作命令
+string                      name                # 地图名称
+robot_msg/Gate[]            gates               # 闸机信息
+
+---
+
+#response fields
+bool                        result              # 执行结果(请求是否成功执行)
+robot_msg/Gate[]            all_gates           # 当前地图内所有闸机信息

@@ -1,0 +1,16 @@
+# 获取覆盖的地图服务
+
+#       cmd
+#   "get"             获取覆盖的地图
+#   "reset"           复位覆盖的地图
+#   "get_cleaned_area"           复位覆盖的地图
+
+string                      cmd                 # 操作命令
+
+---
+
+#response fields
+
+bool                        result              # 执行结果(请求是否成功执行) false表示没有收到/map
+float32                  cleaned_area   #已清洁的面积
+nav_msgs/OccupancyGrid      covered_map         # 覆盖的地图

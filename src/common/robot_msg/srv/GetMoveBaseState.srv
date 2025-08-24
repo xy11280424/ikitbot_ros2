@@ -1,0 +1,12 @@
+# srv definition
+
+int32 data #1: 获取校准状态
+---
+
+#response fields
+# 返回-1：未知错误，
+# bit0：是否在虚拟墙里；1在虚拟墙里
+# bit1：是否电机错误；1电机错误
+# bit2: 是否定位丢失；1定位丢失
+
+int32 state

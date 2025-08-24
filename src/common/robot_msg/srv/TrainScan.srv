@@ -1,0 +1,4 @@
+string path # path to store files for {scan, voc, bow};
+string filename # string for prefix of the files
+---
+bool result # to indicate success or not

@@ -1,0 +1,31 @@
+# 定义目标goal
+
+bool                mode                    # true: 进电梯, false: 出电梯
+
+geometry_msgs/Pose  takepose                # 当前楼层的乘梯点
+
+geometry_msgs/Pose  waitpose                # 当前楼层的候梯点
+
+
+---
+# Define the result
+bool result       # 成功１　失败０
+
+---
+# Define a feedback message
+# constants state enum
+uint8 NONE              = 0 # 初始化状态
+uint8 SET_NEW_GOAL      = 1 # 收到新指令
+uint8 POSE_ADJ          = 2 # 调整机器人位姿
+uint8 ENTER_ELEVATOR    = 3 # 进电梯
+uint8 ENTER_SUCCESS     = 4 # 进电梯成功
+uint8 TAKE_THE_ELEVATOR = 5 # 乘坐电梯
+uint8 GET_OUT_ELEVATOR  = 6 # 出电梯
+uint8 SUCCESS           = 7 # 成功
+uint8 FAILURE_FULL      = 8 # 失败-满员
+uint8 FAILURE           = 9 # 失败
+uint8 CANCLED           = 10 # 取消
+uint8 FAILURE_OUT       = 11 # 出电梯失败-阻塞
+
+uint8   feedback
+string  feedback_text

@@ -1,0 +1,17 @@
+# CoveragePathEstimate 服务
+
+# failure_reason
+         #   "no_map"
+        #  "map_subscribe_fail"
+        # "no_region_info_fail"
+
+string                              map_location
+RegionClean             clean_region
+
+---
+
+#response fields
+
+bool          result
+string        failure_reason 
+bool          is_comlex_env

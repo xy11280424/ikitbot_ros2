@@ -1,0 +1,16 @@
+# 获取覆盖的地图服务
+
+#       cmd
+#   "get_virtual_bumper_infos"             获取虚拟碰撞的信息
+#   "get_wall_follow_infos"            获取沿墙的信息
+
+string                      cmd                 # 操作命令
+
+---
+
+#response fields
+
+bool                        result              # 执行结果(请求是否成功执行) false表示失败
+robot_msg/VirtualBumperItem[]  vb_infos  #虚拟碰撞的信息
+robot_msg/WallFollowInfoItem[]  wf_infos  #虚拟碰撞的信息
+

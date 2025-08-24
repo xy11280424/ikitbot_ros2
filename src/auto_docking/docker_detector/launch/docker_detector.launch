@@ -1,0 +1,28 @@
+<launch>
+    <arg name="product_model" default="$(env PRODUCT_MODEL)"/>
+    <!--
+    标准底盘 : std_chassis
+    -->
+    <group if="$(eval product_model == 'std_chassis')">
+        <node name="docker_detector"  pkg="docker_detector"  type="docker_detector_node" output="log" respawn="true" >
+            <param name="min_point_num"         type="int"    value="5"/>          <!-- 最小检测点个数 -->
+            <param name="min_index_num"         type="int"    value="5"/>          
+            <param name="max_gap_dist"          type="double" value="0.1"/>        <!-- 最大间隔距离 -->
+            <param name="in_line_threshold"     type="double" value="0.02"/>       <!-- 线段判断阈值 -->
+
+            <param name="docker_line_len"               type="double"   value="0.20"/>  <!-- 充电桩参数 -->
+            <param name="docker_angle_diff"             type="double"   value="110"/>
+            <param name="match_len_tolerance"           type="double"   value="0.03"/>  <!-- 匹配容忍度 -->
+            <param name="match_angle_tolerance"         type="double"   value="6"/>
+            <param name="docker_distance_threshold"     type="double"   value="0.5" />
+            <param name="laser_yaw_calibration"         type="double"   value="180.0" />
+            <param name="lidar_reverse"                 type="bool"     value="false" />
+            <param name="intensity_min"                 type="double"   value="0.0" />    <!-- 激光强度 -->
+            <param name="intensity_max"                 type="double"   value="1500.0" />
+            <param name="laser_frame"            type="string"          value="laser" />
+            <param name="docker_frame"           type="string"          value="docker" />
+            <param name="pub_visual_marker"      type="bool"            value="true" />
+        </node>
+    </group>
+
+</launch>

@@ -1,0 +1,50 @@
+#request fields
+
+#   全局参数设置/获取服务
+
+#   cmd  =====================
+#   "set"             
+#   "get"           
+
+# 全局参数 ===================
+# 使能参数
+# real_bumper:  false      实体碰撞条使能
+# virtul_bumper: false     虚拟碰撞使能
+
+# up_camera:false          上方深度相机使能
+# down_camera:false     下方深度相机使能
+
+# ultrasonic_front_left: false        前左超声波传感使能
+# ultrasonic_front_right: false      前右超声波传感使能
+# ultrasonic_back_left：false       后左超声波传感使能
+# ultrasonic_back_right：false     后右超声波传感使能
+# ultrasonic_middle_left：false    前中左超声波传感使能
+# ultrasonic_middle_right：false   前中右超声波传感使能
+
+# laser_left: false      			左线激光传感使能
+# laser_right：false       		后线激光传感使能
+# laser_middle_left：false     	前左线激光传感使能
+# laser_middle_right：false    	前右线激光传感使能
+# laser_middle_back：false   	后线激光传感使能
+
+# 线激光障碍物识别高度
+# min_obstacle_height: 0.04
+# max_obstacle_height: 0.2
+
+# 深度相机地面滤波的范围
+# eliminate_z_min: -0.05
+# eliminate_z_max: 0.02
+
+# 深度相机跌落识别的-高度
+# cliff_height: -0.05
+
+string                      cmd                       # 操作命令
+Parameters[]        params              # 参数指令数组           
+
+---
+
+#response fields
+
+bool                        result                     # 执行结果(请求是否成功执行)
+bool                        need_restart      # 执行的指令是否需要重启动系统
+Parameters[]       params                 # 执行后的参数状态

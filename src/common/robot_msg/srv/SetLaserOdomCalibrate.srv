@@ -1,0 +1,20 @@
+# 1 启动
+# 2 获得进度
+# 99 关闭校准
+
+
+uint8 cmd
+int16 seconds
+---
+bool    result          #   收到命令，成功或者失败
+bool   calib_successd  #标定是否成功
+int16   progress 
+int32   message_code    #   额外信息代码
+string  message         #   额外信息，e.g. for error messages
+
+float32 left_radius   # 左轮子半径
+float32 right_radius   # 左轮子半径
+float32 trend_length  # 轮间距离
+float32 lidar_odom_x               # 激光雷达安装位置 x
+float32 lidar_odom_y               # 激光雷达安装位置 y
+float32 lidar_odom_yaw        #  激光雷达安装位置 yaw

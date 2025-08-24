@@ -1,0 +1,53 @@
+<?xml version="1.0"?>
+<package format="3">
+  <name>auto_docking</name>
+  <version>1.1.4</version>
+  <description>The auto_docking package for autonomous docking</description>
+
+  <!-- Maintainer -->
+  <maintainer email="gxy@todo.todo">glh</maintainer>
+
+  <!-- License -->
+  <license>TODO</license>
+
+  <!-- Buildtool -->
+  <buildtool_depend>ament_cmake</buildtool_depend>
+
+  <!-- Build dependencies -->
+  <build_depend>rclcpp</build_depend>
+  <build_depend>geometry_msgs</build_depend>
+  <build_depend>nav_msgs</build_depend>
+  <build_depend>std_msgs</build_depend>
+  <build_depend>std_srvs</build_depend>
+  <build_depend>sensor_msgs</build_depend>
+  <build_depend>tf2</build_depend>
+  <build_depend>tf2_ros</build_depend>
+  <build_depend>tf2_geometry_msgs</build_depend>
+  <build_depend>angles</build_depend>
+  <build_depend>robot_msg</build_depend>
+  <build_depend>laser_geometry</build_depend>
+  <build_depend>yaml-cpp</build_depend>
+
+  <!-- Execution dependencies -->
+  <exec_depend>rclcpp</exec_depend>
+  <exec_depend>geometry_msgs</exec_depend>
+  <exec_depend>nav_msgs</exec_depend>
+  <exec_depend>std_msgs</exec_depend>
+  <exec_depend>std_srvs</exec_depend>
+  <exec_depend>sensor_msgs</exec_depend>
+  <exec_depend>tf2</exec_depend>
+  <exec_depend>tf2_ros</exec_depend>
+  <exec_depend>tf2_geometry_msgs</exec_depend>
+  <exec_depend>angles</exec_depend>
+  <exec_depend>robot_msg</exec_depend>
+  <exec_depend>laser_geometry</exec_depend>
+  <exec_depend>yaml-cpp</exec_depend>
+
+  <!-- Optional author information -->
+  <!-- <author email="someone@example.com">Author Name</author> -->
+
+  <!-- Export -->
+  <export>
+    <build_type>ament_cmake</build_type>
+  </export>
+</package>

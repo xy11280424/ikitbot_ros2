@@ -1,0 +1,9 @@
+# RoomSegmentation.srv
+string      map_location
+int32        region_id
+sensor_msgs/Image map
+robot_msg/IntPolygon roi
+uint8 env_type
+uint8 method
+---
+robot_msg/IntPolygon[] segmented_rooms

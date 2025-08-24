@@ -1,0 +1,19 @@
+#request fields
+
+#   "set"              设置充电桩信息(如果地图名称"null"则默认设置当前地图的充电桩，充电桩已存在则覆盖)
+#   "get"              获取指定地图的充电桩信息(如果地图名称"null"则默认返回当前地图的充电桩，如果不存在则返回 result = false)
+#   "clear"            清空指定地图的充电桩信息(如果地图名称"null"则默认清除当前地图的充电桩)
+
+#   每次的充电桩信息操作后都会返回被设定地图的充电桩信息
+
+string                      cmd                 # 操作命令
+string                      name                # 地图名称("null"代表设置当前正在使用的地图)
+geometry_msgs/Vector3       pose                # 充电桩信息
+
+---
+
+#response fields
+
+bool                        result              # 执行结果
+bool                        is_updated           # 自动校准标志    true: 已校准
+geometry_msgs/Vector3       pose                # 充电桩信息

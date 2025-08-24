@@ -1,0 +1,44 @@
+# 定义目标goal
+uint8 TRACK_BYPASS          = 0          # 循线绕障模式
+uint8 AROUND_BYPASS         = 1          # 绕障模式
+uint8 CHARGE_BYPASS         = 2          # 充电模式
+uint8 FOLLOW_STRICT         = 3          # 严格循线
+uint8 ELEVATOR              = 4          # 进出电梯模式
+uint8 EBAND                 = 5          # eband模式
+uint8 ELEVATOR_PLAN         = 6          # 进出电梯的规划模式
+uint8 FOLLOW_PATH           = 8          # 跟随路径模式 zigzag
+uint8 FOLLOW_PATH_EDGE      = 9          # follow edge
+uint8 FOLLOW_PATH_TEACH     = 10         # teach path
+uint8 ELEVATOR_PLAN_AGAIN   = 11         # replan for elevator control
+
+uint8 navigation_mode                   # 导航模式
+
+
+# -1 不需要容忍 0 默认的容忍 1 圆形容忍 2 矩形容忍
+int8 tolerance_type                     # 容忍的类型
+
+
+# 0 默认按照栅格代价值由小到大 1 按照栅格代价值由大到小
+# 2 按照与目标点的距离由远到近 3 按照与目标点的距离由近到远
+# 4 按照势场值由小到大        5 按照势场值由大到小
+int8 tolerance_cost_method              # 选择候选目标点的方法
+
+
+float32 circular_tolerance              # 圆形容忍的范围
+float32 rectangle_tolerance_front       # 矩形容忍前方距离
+float32 rectangle_tolerance_back        # 矩形容忍后方距离
+float32 rectangle_tolerance_left        # 矩形容忍左方距离
+float32 rectangle_tolerance_right       # 矩形容忍右方距离
+
+geometry_msgs/PoseStamped target_pose   # 目标点
+geometry_msgs/PoseStamped[] path        # 需要跟随的路径
+bool    publish_near_goal   #是否发布接近目标点
+float32 speed               #PTP
+uint8   track_mode          #模式
+float32 wait_time           #等待时间
+bool    supplement_scan     #补扫
+float32 water_suck_time     #吸水时间（秒）
+float32 edge_dist           #
+---
+---
+geometry_msgs/PoseStamped base_position # 机器人当前位置

@@ -1,0 +1,29 @@
+# 定义目标goal
+bool dock_ctrl  # 对接控制    true 去充电      false 取消充电
+bool touch      # 接触控制    true 接触充电桩   false 不后退接触
+---
+# Define the result 回充结果
+bool dock_result       # 成功１　失败０
+
+---
+# Define a feedback message
+# constants state enum
+uint8 NONE              = 0 #初始化状态
+uint8 SEARCHING_STATION = 1 # 1-寻找充电桩
+uint8 DOCKING_STATION   = 2 # 2-对接中
+uint8 DOCKING_SUCCESS   = 3 # 3-对接成功
+uint8 SEPERATING        = 4 # 4-脱离中
+uint8 SEPERATING_DONE   = 5 # 5-脱离成功
+uint8 CANCLED           = 6 # 6-动作被取消
+uint8 SEARCHING_FAILURE = 7 # 7-失败-未找到充电桩
+uint8 DOCKING_FAILURE   = 8 # 8-失败-对接失败
+uint8 SEPERAT_FAILURE   = 9 # 9-失败-脱离失败
+uint8 OBSTACLE          = 10 # 10-对接中-障碍物阻挡
+uint8 OBSTACLE_FAILURE  = 11 # 11-失败-障碍物阻挡
+uint8 TIMEOUT           = 12 # 12-timeout
+uint8 ERROR_DOCKER_POS           = 13 # -失败-非法充电桩
+uint8 DOCKER_NO_POWER          = 14 # 充电桩没电
+uint8 DOCKER_OUT_OF_DISTANCE          = 15 # 超出距离限制
+
+uint8 dock_feedback
+string dock_feedback_text

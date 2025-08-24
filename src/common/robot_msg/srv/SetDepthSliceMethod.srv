@@ -1,0 +1,10 @@
+int8 NO_USE = -1  #不使用深度相机避障
+int8 NORMAL = 0   #正常
+int8 JOLT = 1     #颠簸
+int8 ON_SLOPE = 2 #在斜坡上
+int8 ELEVATOR = 3 #进出电梯
+
+int8 method
+---
+bool success
+int8 error_code

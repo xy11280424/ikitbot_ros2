@@ -1,0 +1,31 @@
+# 脱离距离
+seperation_dis: 0.23
+# 对接避障安全距离
+docking_safety_distance: 0.25
+# 是否使用imu角度
+docking_use_imu_angle: false
+# 是否使用bms数据
+docking_use_bms_state: true
+# 是否使用超声数据
+docking_enable_sonar: true
+# 是否使用线激光数据
+docking_enable_line_laser: true
+# 是否使用虚拟碰撞数据
+docking_enable_virtual_bumper: true
+# 是否使用真实碰撞条数据
+docking_enable_real_bumper: false
+# 最大对接距离
+max_docking_distance: 0.25
+# 前推安全距离
+forward_safety_dis: 0.15
+# 对接方向
+docking_forward: true
+# 机器人半径
+robot_radius: 0.23
+
+#充电桩前面点偏置距离
+docking_point_offset: 0.8
+#导航到位距离容忍度
+distance_movebase_arrived_tolerance: 0.8
+#充电桩前面偏置点，扫描到的充电桩时，docker_pose距离机器base_link的距离容忍度
+scan_docker_distance_tolerance: 1.5

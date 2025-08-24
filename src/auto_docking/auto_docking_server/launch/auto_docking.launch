@@ -1,0 +1,12 @@
+<launch>
+    <arg name="hardware_version" default="$(env HARDWARE_VERSION)" />
+    <env name="ROSCONSOLE_CONFIG_FILE" value="$(find auto_docking)/cfg/mylog.config"/>
+
+    <!--docker detector-->
+    <include file="$(find docker_detector)/launch/docker_detector.launch"/>
+
+    <node name="auto_docking"  pkg="auto_docking"  type="auto_docking_node" output="log" respawn="true" >
+        <rosparam file="$(find auto_docking)/param/auto_docking_param_$(arg hardware_version).yaml" command="load" />
+        <!--<remap from="cmd_vel" to="/cmd_vel_mux/input/auto_docking"/>-->
+    </node>
+</launch>

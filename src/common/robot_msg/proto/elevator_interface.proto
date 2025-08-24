@@ -1,0 +1,42 @@
+syntax = "proto3";
+package elevator;
+
+service Elevatoer {
+    rpc StreamRpc(stream elevatorRequest) returns (stream elevatorResponse) {}
+}
+
+message elevatorRequest
+{
+    // device_type      cmd               param1                           param2
+    // "afe"            "set_afe"           忽略                            1: 打开闸机
+    // "afe"             "afe_state"        忽略                            忽略
+    // "elevator"        "set_door"         忽略                            1: 门常开   0:常开释放
+    // "elevator"        "goto_floor"       0：内召 1:外召上行 2：外召下行     目标楼层
+    // "elevator"        "state"            忽略                            忽略
+	
+    string  device_type = 1;   
+    string  cmd = 2;   
+    int32   param1 = 3; 
+    int32   param2 = 4;  
+}
+
+message elevatorResponse
+{
+    // device_type      cmd             msg_code    msg   current_floor  floor_state                door_state
+    // "afe"             "set_afe"                                                                   0：关闭1：打开
+    // "afe"            "afe_state"                                                                  0：关闭1: 打开
+    // "elevator"        "set_door"                                      0：停止 1:上行2: 下行         0：停止 1开门2:关门
+    // "elevator"        "goto_floor"                                    0：停止 1:上行2: 下行         0：停止 1开门2:关门
+    // "elevator"        "state"                                         0：停止 1:上行2: 下行         0：停止 1开门2:关门
+	
+    string    device_type = 1;
+    string     cmd = 2;   
+    int32      msg_code = 3;
+    string     msg = 4;   // e.g. for error messages
+    int32      current_floor = 5;   // 当前楼层
+    int32      floor_state = 6;   // 层状态
+    int32      door_state = 7;   // 门状态
+}
+
+
+

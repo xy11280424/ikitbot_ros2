@@ -1,0 +1,50 @@
+# srv definition
+
+#request constants
+# device_id:            cmd                 param1                      param2          param3
+#    "motor"
+#                       "release_motor"     0 : 上电锁轴
+#                                           1 : 下电松轴
+#
+#                       "clear_alarm"       1 : 清除电机警告
+#
+#    "humidifier"
+#                       "power"             0 : 开机
+#                                           1 : 关机
+#                       "fog_level"         雾量等级
+#   "battery"
+#                       "charge"            0 : 充电
+#                                           1 : 停止充电
+#   "safety_sensors"
+#                       "cliff"             0 : 失能
+#                                           1 : 使能
+#                       "bump"             0 : 失能
+#                                           1 : 使能
+#                       "sonar"             0 : 失能
+#                                           1 : 使能
+#                       "tf_cliff_left"                                                 x,y,z,roll,pitch,yaw
+#                       "tf_cliff_right"                                                x,y,z,roll,pitch,yaw
+#                       "tf_sonar_left"                                                 x,y,z,roll,pitch,yaw
+#                       "tf_sonar_mid"                                                  x,y,z,roll,pitch,yaw
+#                       "tf_sonar_right"                                                x,y,z,roll,pitch,yaw
+#    "elevator"
+#                       "goto_floor"        dir:1 上行 2:下行 0:内招      目标楼层
+#                       "set_door"          1: 常开
+#                                           0: 释放
+#     "afe"             "set_afe"           1: 闸机开
+#                                           0: 释放
+#
+#request fields
+string  device_id       # 硬件设备id
+string  cmd             # 命令id
+int32   parameter1      # 参数1
+int32   parameter2      # 参数2
+string  parameter3	# 参数3
+---
+
+#response constants
+
+#response fields
+bool    result          #   收到命令，成功或者失败
+int32   message_code    #   额外信息代码
+string  message         #   额外信息，e.g. for error messages

@@ -1,0 +1,33 @@
+# zigzag move服务
+
+#       cmd
+        #   "start"   
+        #   "pause"
+        #   "resume"
+        #   "cancel"           
+
+#       result
+         #   "no_map"
+        #   "start_success"
+        #   "start_fail"
+        #   "pause_success"
+        #   "pause_fail"
+        #   "resume_success"
+        #   "resume_fail"
+        #   "cancel_success"
+        #   "cencel_fail"
+
+string                      cmd                 # 操作命令
+string                      goal_path_location
+string                      map_name
+int32                       map_id
+string                      region_name
+int32                       region_id
+string                      path_type
+
+
+---
+
+#response fields
+
+string                        result 

@@ -1,0 +1,14 @@
+# srv definition
+
+#request constants
+#  take_pose 机器人的乘梯点，在电梯内部							
+
+#request fields
+geometry_msgs/PoseStamped take_pose
+---
+
+#response constants
+
+#response fields
+bool        result                      # true : 计算电梯中心成功, false : 计算电梯中心失败
+geometry_msgs/PoseStamped center_pose

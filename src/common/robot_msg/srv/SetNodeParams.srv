@@ -1,0 +1,11 @@
+#request fields
+
+#   全局参数设置
+Parameters        param             # 参数指令数组           
+
+---
+
+#response fields
+
+bool                        result                     # 执行结果(请求是否成功执行)
+Parameters       param                 # 执行后的参数状态

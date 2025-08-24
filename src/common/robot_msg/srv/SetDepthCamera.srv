@@ -1,0 +1,10 @@
+# 1 start  启动深度相机
+# 2 stop  停止深度相机
+# 3 get_state   获得深度相机的状态 : 0 idle,1 已启动 
+
+uint8 cmd
+---
+bool    result          #   收到命令，成功或者失败
+uint8   state            #   深度相机的状态 : 0 idle,1 已启动 
+int32   message_code    #   额外信息代码
+string  message         #   额外信息，e.g. for error messages

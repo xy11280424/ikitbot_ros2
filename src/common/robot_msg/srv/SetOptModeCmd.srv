@@ -1,0 +1,22 @@
+# srv definition
+
+
+#request fields
+string                      cmd_request_id          # 请求id
+uint8                       cmd_type                # 0-自动导航模式AutoMode  1-手动控制模式JogMode  2-手动避障模式JogAvoidMode  3-行人跟随模式FollowMode 
+uint16                      cmd_data                # 缺省
+---
+
+#response constants
+
+#response fields
+bool        result                      # true : 指令合法接收, false : 指令违法拒绝
+string      cmd_request_id 	            # 回复id，与当前cmd_request_id值相同，表明ros收到命令
+string      message                     # 额外信息，e.g. for error messages
+int32       message_code
+
+
+#################################################
+# message_code
+# 1                 命令设置成功
+# 2                 命令设置设置失败

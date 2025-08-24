@@ -1,0 +1,12 @@
+# 1 启动校准节点
+# 2 继续
+# 3 重新校准
+# 4 加载校准参数
+# 5 关闭校准节点
+# 6 查看最新校准效果
+
+uint8 cmd
+---
+bool    result          #   收到命令，成功或者失败
+int32   message_code    #   额外信息代码
+string  message         #   额外信息，e.g. for error messages

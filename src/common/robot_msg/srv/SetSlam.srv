@@ -1,0 +1,9 @@
+std_msgs/Header header
+string cmd #build/save/switch/reloc/get_original_map, build/get_original_map cmd do not use others
+string mapdir #absolute path with no end slash
+string filename #map file name with no suffix (.pbstream and .pgm)
+bool accurate_initial_pose #is the initial pose accurate
+geometry_msgs/Pose initial_pose  #only switch cmd use this
+---
+bool success
+string message

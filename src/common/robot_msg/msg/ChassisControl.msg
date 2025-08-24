@@ -1,0 +1,1 @@
+uint8 emergency_switch_status

@@ -1,0 +1,16 @@
+# srv definition
+
+#request constants
+#  wait_pose 机器人的候梯点，在电梯外部	
+#  take_pose 机器人的乘梯点，在电梯内部							
+
+#request fields
+geometry_msgs/Vector3       wait_pose           # 候梯点
+geometry_msgs/Vector3       take_pose           # 乘梯点
+---
+
+#response constants
+
+#response fields
+bool        result                      # true : 计算电梯中心成功, false : 计算电梯中心失败
+float32     take_to_door_angle          # 返回乘梯点对着门中心的角度，如果result=false，则为对准候梯点

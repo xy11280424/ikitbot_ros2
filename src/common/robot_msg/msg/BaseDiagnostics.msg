@@ -1,0 +1,9 @@
+bool     chassis_offline
+bool     imu_offline
+bool     motor_offline
+bool     bms_offline
+bool     sonar_offline
+bool     hum_offline
+uint32   motor_left_err_code
+uint32   motor_right_err_code
+uint32   bms_err_code

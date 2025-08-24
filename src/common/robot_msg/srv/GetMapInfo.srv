@@ -1,0 +1,18 @@
+#request fields
+
+#       cmd
+#   "get_floor"             获取楼层号(map_name参数必须给出，若map_name == "null"，则代表获取当前机器人所在地图的楼层号)
+#   "get_map_name"          获取指定楼层的地图名称(floor参数必须给出)
+
+
+string                      cmd                 # 操作命令
+string                      map_name            # 地图名称("null"代表当前正在使用的地图)
+int32                       floor               # 楼层
+
+---
+
+#response fields
+
+bool                        result              # 执行结果(请求是否成功执行)
+int32                       floor               # 楼层
+string                      map_name            # 地图名称

@@ -1,0 +1,10 @@
+
+std_msgs/Header header
+robot_msg/VirtualBumperItem front
+robot_msg/VirtualBumperItem front_left
+robot_msg/VirtualBumperItem left
+robot_msg/VirtualBumperItem back_left
+robot_msg/VirtualBumperItem back
+robot_msg/VirtualBumperItem back_right
+robot_msg/VirtualBumperItem right
+robot_msg/VirtualBumperItem front_right

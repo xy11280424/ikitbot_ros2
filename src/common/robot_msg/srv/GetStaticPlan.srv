@@ -1,0 +1,8 @@
+geometry_msgs/PoseStamped start # 起点
+geometry_msgs/PoseStamped goal  # 终点
+float64 start_tolerance # 起点的容忍
+float64 goal_tolerance  # 终点的容忍
+---
+int32   message_code    #   额外信息代码。-1：未知错误，0：成功，1：目标点距离障碍物太近，2：路径穿过障碍物，3：起始点距离障碍物太近。
+string  message         #   额外信息，e.g. for error messages
+geometry_msgs/PoseStamped[] path

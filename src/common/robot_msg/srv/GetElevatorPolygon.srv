@@ -1,0 +1,15 @@
+#request fields
+
+#   每次的乘梯信息操作后都会设定地图的乘梯信息
+
+geometry_msgs/Vector3       wait_pose           # 候梯点
+geometry_msgs/Vector3       take_pose           # 乘梯点
+float32[]                   size                # 电梯尺寸, 宽度，深度 单位m
+
+---
+
+#response fields
+
+bool                        result              # 执行结果(请求是否成功执行)
+geometry_msgs/Polygon       polygon             # 电梯尺寸坐标
+float32                     elevator_match_score  # 电梯匹配得分

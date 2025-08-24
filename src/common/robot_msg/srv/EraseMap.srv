@@ -1,0 +1,16 @@
+# srv definition
+
+#request constants
+
+#   "erase"     擦除
+
+#request fields
+string                  cmd                          # 操作命令
+robot_msg/Restrict[]    areas                        # 操作区域
+---
+
+#response constants
+#response fields
+bool    result          #   执行结果，成功或者失败
+int32   message_code    #   额外信息代码
+string  message         #   额外信息，e.g. for error messages

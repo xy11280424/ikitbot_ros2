@@ -1,0 +1,11 @@
+# srv definition
+
+int32 data #1: 获取校准状态
+---
+
+#response fields
+# 返回-1：未知错误，
+# bit0： 相机是否校准；1已校准
+# bit1： 相机是否有数据；1有数据
+
+int32 state

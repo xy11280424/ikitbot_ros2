@@ -1,0 +1,24 @@
+# ipa eploration plan服务
+
+#       failure_reason
+         #   "no_map"
+        #   "plan_success"
+        #   "plan_fail"
+        #   "cancel_success"
+        #   "cencel_fail"
+
+
+string                              map_location
+RegionClean[]             clean_regions
+
+---
+
+#response fields
+
+bool          result
+string        failure_reason
+RegionClean[]           clean_regions
+int32[]                           fail_region_id
+float32                          total_area
+float32                          time_require
+

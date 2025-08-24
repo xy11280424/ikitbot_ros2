@@ -1,0 +1,14 @@
+# cmd:
+#  "scan_left": 标定前左线激光
+#  "scan_right": 标定前右线激光
+#  "scan_right_r": 标定右侧线激光
+#  "scan_left_l": 标定左侧线激光
+#  "scan_back": 标定后方线激光
+
+string cmd
+float32 err_z_tolerance
+float32 shift_z
+---
+bool    result          #   收到命令，成功或者失败
+int32   message_code    #   额外信息代码
+string  message         #   额外信息，e.g. for error messages

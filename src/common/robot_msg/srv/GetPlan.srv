@@ -1,0 +1,9 @@
+# The start pose for the plan
+geometry_msgs/PoseStamped start
+
+# The final pose of the goal position
+geometry_msgs/PoseStamped goal
+---
+int32   message_code    #   额外信息代码。-1：未知错误，0：成功，1：目标点距离障碍物太近，2：路径穿过障碍物，3：起始点距离障碍物太近。
+string  message         #   额外信息，e.g. for error messages
+geometry_msgs/PoseStamped[] path

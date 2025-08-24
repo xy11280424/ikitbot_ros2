@@ -1,0 +1,34 @@
+# CoveragePathSegmentation.srv
+#       failure_reason
+         #   "no_map"
+        #   "segmentation_success"
+        #   "segmentation_fail"
+
+#       env_type
+         #   0      未设置定
+         #    1      大堂环境
+         #    2      走道环境
+         #    3      超市环境
+         #    4      办公室环境
+
+
+#       segmentation_algorithm
+         #   0      未设置定 
+        #   1    MorphologicalSegmentation
+        #   2    DistanceSegmentation
+        #   3    VoronoiSegmentation     
+        #   6    自研算法             default
+        #   99    PassThrough Segmentation  不做自动分区
+
+
+string                             map_location
+RegionClean              clean_region
+
+---
+
+#response fields
+
+bool          result
+bool          segmentation_result
+string        failure_reason
+RegionClean[]           clean_regions
